@@ -1,0 +1,139 @@
+"Phrases"
+{
+  "Tip Tag (c)"
+  {
+    "en"    "{green}[{lightgreen}TIP!{green}]"
+    "es"    ""
+  }
+  
+  "Tip (c)"
+  {
+    "en"    "{default}Press {green}E {default}+ {green}MOUSE1 {default}to fire a missile with any weapon,\n{green}CTRL {default}+ {green}E {default}+ {green}M1 {default}to lock onto a target."
+    "es"    ""
+  }
+  
+  "Missile Count"
+  {
+	"#format"	"{1:d},{2:d}"
+    "en"    	"[ MISSILES ( {1}/{2} ) ]"
+    "es"   	 	""
+  }
+  
+  "No Missiles"
+  {
+	"#format"	"{1:d}"
+    "en"		"You have no missiles! Get {1} kills to earn one."
+    "es"		""
+  }
+  
+  "No Space"
+  {
+    "en"		"Not enough space to launch!"
+    "es"		""
+  }
+  
+  "Missiles Left"
+  {
+	"#format"	"{1:d},{2:d}"
+    "en"    	"Missile Reserve: {1}/{2}"
+    "es"   	 	""
+  }
+  
+  "Missile Target Lock Lost"
+  {
+    "en"    	"Missile Locked on <ERROR_TARGET_LOST>, distance: ???"
+    "es"   	 	""
+  }
+  
+  "Missile Locked"
+  {
+	"#format"	"{1:N},{2:d}"
+    "en"    	"Missile Locked on: {1}, distance: {2}"
+    "es"   	 	""
+  }
+  
+  "Enemy Missile Locked"
+  {
+	"#format"	"{1:d}"
+    "en"    	"WARNING! Enemy's missile locked, distance: {1}"
+    "es"   	 	""
+  }
+  
+  "Missile Locked2"
+  {
+	"#format"	"{1:d}"
+    "en"    	"Missile Locked on enemy, distance: {2}"
+    "es"   	 	""
+  }
+  
+  "Missile Locked3"
+  {
+	"#format"	"{1:d}"
+    "en"    	"Missile locked on enemy's missile, distance: {1}"
+    "es"   	 	""
+  }
+  
+  "Enemy Missile Intercepted"
+  {
+	"#format"	"{1:N}"
+    "en"    	"FAIL! Your missile was intercepted by: {1}."
+    "es"   	 	""
+  }
+  
+  "Enemy Missile Intercepted2"
+  {
+    "en"    	"FAIL! Your missile was intercepted by enemy."
+    "es"   	 	""
+  }
+  
+  "Missile Intercepted"
+  {
+	"#format"	"{1:N}"
+    "en"    	"SUCCESS! You intercepted {1}'s missile."
+    "es"   	 	""
+  }
+  
+  "Missile Intercepted2"
+  {
+    "en"    	"SUCCESS! You intercepted the enemy's missile."
+    "es"   	 	""
+  }
+  
+  "Missile Fail"
+  {
+    "en"    	"FAIL! Your missile missed."
+    "es"   	 	""
+  }
+  
+  "Enemy Missile Hit"
+  {
+	"#format"	"{1:N}"
+    "en"    	"You were hit by {1}'s missile!"
+    "es"   	 	""
+  }
+  
+  "Enemy Missile Hit2"
+  {
+    "en"    	"You were hit by the enemy's missile."
+    "es"   	 	""
+  }
+  
+  "Missile Success"
+  {
+	"#format"	"{1:N}"
+    "en"    	"SUCCESS! Your missile hit: {1}"
+    "es"   	 	""
+  }
+  
+  "Missile Fail2"
+  {
+    "en"    	"FAIL! Your missile hit a obstacle."
+    "es"   	 	""
+  }
+  
+  "Missile Success2"
+  {
+    "en"    	"SUCCESS! Missile Exploded"
+    "es"   	 	""
+  }
+ }
