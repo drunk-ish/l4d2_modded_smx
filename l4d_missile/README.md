@@ -1,5 +1,5 @@
-*compiled with SourceMod build 1.12.0.7228 (32-bit)*
-*forked off [eyeonus]([https://github.com/lakwsh/l4dtoolz](https://forums.alliedmods.net/showpost.php?p=2730955&postcount=85)'s version*
+*compiled with SourceMod build 1.12.0.7228 (32-bit)*<br>
+*forked off [eyeonus]([https://github.com/lakwsh/l4dtoolz](https://forums.alliedmods.net/showpost.php?p=2730955&postcount=85))'s version*
 
 **changes:**<br>
 - updated to SourcePawn Transitional Syntax + made it a little more readable<br>
