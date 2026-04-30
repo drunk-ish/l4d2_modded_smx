@@ -1,5 +1,5 @@
 *compiled with SourceMod build 1.12.0.7228 (32-bit)*<br>
-*based off [eyeonus](https://forums.alliedmods.net/showpost.php?p=2730955&postcount=85)'s fork (2021)*
+*based off [eyeonus](https://forums.alliedmods.net/showpost.php?p=2730955&postcount=85)'s fork (2021)*<br>
 *requires [multicolors.inc](https://github.com/fbef0102/L4D1_2-Plugins/releases/tag/Multi-Colors) for compiling*
 
 **changes:**<br>
