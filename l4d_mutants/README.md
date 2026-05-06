@@ -13,3 +13,4 @@ ambient_generic version for the Kamikaze SFX is **experimental**, I recommend to
 - Get the damn ambient_generic version to work!!! >:(
 - Bypass the VOL limit to make it a lil bit more louder.
 - Somehow improve the loop to be seamless
+- Ensure the sound will be deleted by force based on death animation instead of waiting for the entity to be deleted or for the sound to end (sound keeps playing even after death for a few secs)
