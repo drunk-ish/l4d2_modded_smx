@@ -7,7 +7,6 @@
 #include <multicolors>
 
 #define SOUNDMISSILELAUNCHER "physics/destruction/explosivegasleak.wav"
-#define SOUNDMISSILELAUNCHER2 "physics/destruction/explosivegasleak.wav"
 #define SOUNDMISSILELOCK "ui/beep07.wav"
 
 #define Missile_Model_Dummy "models/w_models/weapons/w_eq_molotov.mdl"
@@ -41,7 +40,7 @@ bool Hooked[MAXPLAYERS + 1];
 float LastUseTime[MAXPLAYERS + 1], LastTime[MAXPLAYERS + 1], MissileScanTime[MAXPLAYERS + 1], PrintTime[MAXPLAYERS + 1];
 int MissileCount[MAXPLAYERS + 1], MissileEntity[MAXPLAYERS + 1], MissileFlame[MAXPLAYERS + 1], MissileOwner[MAXPLAYERS + 1], MissileTeams[MAXPLAYERS + 1], MissleModel[MAXPLAYERS + 1], MissileType[MAXPLAYERS + 1], MissileEnemy[MAXPLAYERS + 1], ShowMsg[MAXPLAYERS + 1];
 
-bool gamestart = false;
+bool gamestart;
 float modeloffset = 50.0, missilespeed_trace = 250.0, missilespeed_trace2 = 180.0, missilespeed_normal = 800.0;
 
 int counter;
@@ -53,6 +52,25 @@ public Plugin myinfo =
 	description = "Missiles for weapons in L4D2",
 	version = "2.0.1",
 	url = "https://github.com/drunk-ish/l4d2_modded_smx/tree/main/l4d2_missile"
+}
+
+public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max)
+{
+	EngineVersion test = GetEngineVersion();
+
+	if(test == Engine_Left4Dead)
+		L4D2Version = false;
+
+	else if(test == Engine_Left4Dead2)
+		L4D2Version = true;
+
+	else
+	{
+		strcopy(error, err_max, "Plugin only supports Left 4 Dead 1 & 2.");
+		return APLRes_SilentFailure;
+	}
+
+	return APLRes_Success;
 }
 
 public void OnPluginStart()
@@ -105,12 +123,6 @@ public void OnPluginStart()
 
 	GetGameFolderName(GameName, sizeof(GameName));
 
-	if (StrEqual(GameName, "left4dead2", false))
-		L4D2Version = true;
-
-	else
-		L4D2Version = false;
-
 	AutoExecConfig(true, "l4d2_missile");
 
 	g_hCvarMissileRadius.AddChangeHook(ConVarChanged_Cvars);
@@ -148,7 +160,7 @@ public void OnPluginStart()
 
 	LoadTranslations("l4d2_missiles.phrases");
 
-	if(GameMode != 2)
+	if(GameMode)
 	{
 		HookEvent("player_death", Event_PlayerDeath);
 		HookEvent("infected_death", Event_InfectedDeath);
@@ -165,13 +177,14 @@ public void OnPluginStart()
 		HookEvent("ability_use", Event_AbilityUse);
 
 		ResetAllState();
-		gamestart = false;
+		gamestart = true;
 	}
 }
 
 public void OnPluginEnd()
 {
 	ResetAllState();
+	gamestart = false;
 	counter = 0;
 }
 
@@ -226,7 +239,7 @@ public void OnMapStart()
 	{
 		PrecacheModel(Missile_Model, true);
 		g_sprite = PrecacheModel("materials/sprites/laserbeam.vmt");
-		PrecacheSound(SOUNDMISSILELAUNCHER2, true);
+		PrecacheSound(SOUNDMISSILELAUNCHER, true);
 	}
 
 	else
@@ -290,7 +303,7 @@ void UnHookAll()
 		UnHookMissile(x);
 }
 
-public void OnConfigExecuted()
+public void OnConfigsExecuted()
 {
 	ResetAllState();
 }
@@ -663,7 +676,7 @@ bool LaunchMissile(int client, float force, int type = MissileTrace, bool up = f
 	SDKHook(client, SDKHook_PreThink, ThinkMissile);
 
 	if(L4D2Version)
-		EmitSoundToAll(SOUNDMISSILELAUNCHER2, 0, SNDCHAN_WEAPON, SNDLEVEL_TRAFFIC, SND_NOFLAGS, SNDVOL_NORMAL, 100, _, pos, NULL_VECTOR, false, 0.0);
+		EmitSoundToAll(SOUNDMISSILELAUNCHER, 0, SNDCHAN_WEAPON, SNDLEVEL_TRAFFIC, SND_NOFLAGS, SNDVOL_NORMAL, 100, _, pos, NULL_VECTOR, false, 0.0);
 	
 	else 
 		EmitSoundToAll(SOUNDMISSILELAUNCHER, 0, SNDCHAN_WEAPON, SNDLEVEL_TRAFFIC, SND_NOFLAGS, SNDVOL_NORMAL, 100, _, pos, NULL_VECTOR, false, 0.0);
