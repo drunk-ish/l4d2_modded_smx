@@ -3,7 +3,7 @@
 *based off Silver's latest version*
 
 **NOTE!:**
-ambient_generic version is **experimental**, i recommend to not use it as of now.
+ambient_generic version for the Kamikaze SFX is **experimental**, i recommend to not use it as of now.
 
 **changes:**<br>
 - removed the mind specialized variant from emitting color corrections due to it conflicting with the already placed ones within valve default maps
