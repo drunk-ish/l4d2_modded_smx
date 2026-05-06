@@ -1,7 +1,8 @@
 *compiled with SourceMod build 1.12.0.7228 (32-bit)*<br>
-*requires SKV's [RTimers](https://forums.alliedmods.net/showthread.php?t=352314) for compiling*
+*requires SKV's [RTimers](https://forums.alliedmods.net/showthread.php?t=352314)*
+*based off Silver's latest version*
 
-NOTE:
+**NOTE!:**
 ambient_generic version is **experimental**, i recommend to not use it as of now.
 
 **changes:**<br>
