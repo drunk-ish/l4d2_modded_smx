@@ -11,3 +11,5 @@ ambient_generic version for the Kamikaze SFX is **experimental**, I recommend to
 
 **[TO-DO]**<br>
 - Get the damn ambient_generic version to work!!! >:(
+- Bypass the VOL limit to make it a lil bit more louder.
+- Somehow improve the loop to be seamless
