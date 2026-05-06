@@ -3,11 +3,11 @@
 *based off Silver's latest version*
 
 **NOTE!:**
-ambient_generic version for the Kamikaze SFX is **experimental**, i recommend to not use it as of now.
+ambient_generic version for the Kamikaze SFX is **experimental**, I recommend to not use it as of now.
 
-**changes:**<br>
-- removed the mind specialized variant from emitting color corrections due to it conflicting with the already placed ones within valve default maps
-- added the Serious Sam (TFE) Kamikaze SFX for the Bomb specialized variant
+**[CHANGES]**<br>
+- Removed the Common Infected (Mind) Specialized Variant from emitting color corrections due to it conflicting with the already placed ones within Valve's vanilla maps
+- Added the Serious Sam (TFE) Kamikaze SFX for the Common Infected (Bomb) Specialized Variant
 
-**to-do:**<br>
-- get the damn ambient_generic version to work!!! >:(
+**[TO-DO]**<br>
+- Get the damn ambient_generic version to work!!! >:(
